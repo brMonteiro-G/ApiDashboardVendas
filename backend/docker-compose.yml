@@ -1,0 +1,16 @@
+
+version: '3.1'
+services:
+  db:
+    image: postgres:13.1
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_USER: postgres
+      POSTGRES_DB: dsvendas
+    ports:
+      - "5432:5432"
+    volumes:
+      - dsvendas_data:/var/lib/postgres/data
+
+volumes:
+  dsvendas_data:
